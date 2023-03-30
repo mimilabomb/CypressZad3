@@ -1,4 +1,10 @@
 class Login{
+    view(){
+    cy.viewport(1280, 720)
+    }
+    navigate() {
+        cy.visit("https://www.edu.goit.global/account/login");
+      }
     getLoginInput(){
         return cy.get('#user_email');
     }

@@ -6,14 +6,10 @@ describe("Nasz pierwszy blok testów", ()=>{
     let loginPage;
     let homePage;
 
-    beforeEach("Test z wizytą w siedzibie LMS",() => {
-        
-        cy.viewport(1280, 720)
-        cy.visit("https://www.edu.goit.global/account/login");
-      })
-
-    it("Znajdź pole do zalogowania i zaloguj się",()=>{
+    it("Znajdź pole do zalogowania, zaloguj się i wyloguj się",()=>{
         const loginPage = new Login();
+        loginPage.view();
+        loginPage.navigate();
         loginPage.getLoginInput().type("user888@gmail.com");
         loginPage.getPasswordInput().type("1234567890");
         loginPage.getSignInBtn().should("have.text","Log in").click();
