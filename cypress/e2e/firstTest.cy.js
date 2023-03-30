@@ -1,5 +1,5 @@
 import HomePage from "../../pages/HomePage";
-import LoginPage from "../../pages/LoginPage";
+import Login from "../../pages/Login";
 
 describe("Nasz pierwszy blok testów", ()=>{
 
@@ -13,7 +13,7 @@ describe("Nasz pierwszy blok testów", ()=>{
       })
 
     it("Znajdź pole do zalogowania i zaloguj się",()=>{
-        const loginPage = new LoginPage();
+        const loginPage = new Login();
         loginPage.getLoginInput().type("user888@gmail.com");
         loginPage.getPasswordInput().type("1234567890");
         loginPage.getSignInBtn().should("have.text","Log in").click();

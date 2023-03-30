@@ -1,4 +1,4 @@
-class LoginPage{
+class Login{
     getLoginInput(){
         return cy.get('#user_email');
     }
@@ -9,4 +9,4 @@ class LoginPage{
         return cy.get('[type=submit]');
     }
 }
-export default LoginPage;
+export default Login;
